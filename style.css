@@ -127,6 +127,11 @@ label a {
 label li {
     list-style-type: none;
 }
+label i {
+    color: rgb(48, 47, 47);
+    font-size: 25px;
+    margin: 0 20px;
+}
 /* ************** navbar ************** */
 .navbar {
     display: flex;
@@ -134,10 +139,9 @@ label li {
     justify-content: space-around;
     background-color: var(--bg-color);
 }
-.fa-brands, .fa-solid{
+.navbar i, .facebook i{
     font-size: 25px;
     margin: 0 20px;
-    /* color: rgb(48, 47, 47); */
     color: var(--text-color);
 }
 .imgIntro img {

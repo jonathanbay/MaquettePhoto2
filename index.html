@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photosmaeght - Capturer vos moments d'émotions</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <label>
+            <input type="checkbox">
+            <span class="menu"> <span class="hamburger"></span> </span>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house iconesMenus"></i>Acceuil</a></li>
+                <li><a href="index.html#bibliographie"><i class="fa-solid fa-person iconesMenus"></i>À propos</a> </li>
+                <li><a href="index.html#categoriePhotos"><i class="fa-solid fa-camera-retro iconesMenus"></i>Portfolio</a> 
+                <li><a href="index.html#categorieServives"><i class="fa-solid fa-photo-film iconesMenus"></i>Services</a></li>
+                <li><a href="index.html#categorieContact"><i class="fa-solid fa-envelope iconesMenus"></i>Contact</a></li>
+                <li><a href="#"><i class="fa-solid fa-user iconesMenus"></i>Galerie privée</a></li>
+                </li>
+            </ul>
+        </label>
+        <div class="navbar">
+            <div class="icones">
+                <a href="https://fr-fr.facebook.com/people/Photomaeght/100057668701223/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="index.html#categorieContact"><i class="fa-solid fa-envelope-circle-check"></i></a>
+            </div>
+            <div class="imgIntro">
+                <img src="./images/logoText.png" alt="logo">
+            </div>
+            <div class="clique"> <p>Cliquez pour explorer </p></div>
+            
+        </div>
+        <div class="traitIntro"></div>
+    </header>
+
+    <section class="carrousel">
+            <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"> 
+                            <img src="./images/carrousel/header11.jpg" alt="photos_mariage_intro">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/carrousel/header22.jpg" alt="famille_intro">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/carrousel/header44.jpg" alt="bebe_intro">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/carrousel/header55.jpg" alt="mariage_intro">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/carrousel/header33.jpg" alt="arrosoir_intro">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/carrousel/header66.jpg" alt="alliance_intro">
+                        </div>
+                    </div>
+            </div>
+
+        <div class="textIntro">
+           <p><i class="fa-solid fa-quote-left"></i>De manière inconsciente, je croise, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie<i class="fa-solid fa-quote-right"></i></p>
+            <h3 class="signature">Steve McCurry</h3>
+        </div>
+    </section>
+
+    <section class="aPropos" id="bibliographie">
+        <div class="presentation">
+            <h1>À propos</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus quae sunt quos porro impedit. Natus dolorem atque at cum culpa impedit, dignissimos enim, reiciendis ipsum consequuntur nesciunt, asperiores eligendi! Corporis reprehenderit enim neque porro excepturi eos nobis. Est possimus voluptas architecto molestias eos iure animi consectetur quis numquam. Magni soluta expedita sit nostrum, enim unde rerum rem amet commodi totam! Ex dolores perferendis voluptatem inventore saepe possimus consequatur necessitatibus deleniti aspernatur .</p>
+            <div class="patricia"></div>
+        </div>
+        <div class="photo">
+            <img src="./images/photographe.jpg" alt="photographe">
+        </div>
+    </section>
+
+    <section class="portfolio" id="categoriePhotos">
+        <div class="categorie mariage"> <a href="portfolioMariages.html"> <img src="./images/categorie/mariage.jpg" loading="lazy" alt="mariage"> </a> </div>
+        <div class="categorie famille"> <a href="portfolioFamilles.html"> <img src="./images/categorie/famille.JPG" loading="lazy" alt="famille"> </a>  </div>
+        <div class="categorie enfant"> <a href="portfolioEnfants.html"> <img src="./images/categorie/enfant.jpg" loading="lazy" alt="enfant"> </a>  </div>
+        <div class="categorie concert"> <a href="portfolioEvenements.html"> <img src="./images/categorie/concert.jpg" loading="lazy" alt="concert"> </a>  </div>
+        <div class="categorie animaux"> <a href="portfolioAnimaux.html"> <img src="./images/categorie/animaux.JPG" loading="lazy" alt="animaux"> </a>  </div>
+    </section>
+
+    <div class="parallaxe"></div>
+
+    <section class="services" id="categorieServives">
+        <div class="identite cart aos-item"
+            data-aos="zoom-out-left"
+            data-aos-duration="1500">
+                <div class="servicePhoto">
+                    <a href="services.html"> <img src="./images/photo-identite.jpg" alt="photo_identité"> </a>
+                    <div>
+                        <p>Photos conformes pour vos documents officiels, nous sommes agrée "agence national des titres sécurisés"...</p>
+                    </div>
+                    <div class="btnServices">
+                        <a href="services.html#identiteService"><button>En savoir plus →</button>  </a>
+                    </div>
+                </div>
+        </div>
+        <div class="cadeau cart aos-item"
+            data-aos="zoom-out"
+            data-aos-duration="1500">
+                <div class="serviceCadeau">
+                    <a href="services.html"> <img src="./images/photo_cadeau.jpg" alt="photo_famille"> </a>
+                    <div>
+                        <p>Offrez un cadeau qui reste!!! Réaliser une photo c'est mettre son quotidien en pause...</p>
+                    </div>
+                    <div class="btnServices">
+                        <a href="services.html#cadeauService"><button>En savoir plus →</button>  </a>
+                    </div>
+                </div>
+        </div>
+        <div class="restauration cart aos-item"
+            data-aos="zoom-out-right"
+            data-aos-duration="1500">
+                <div class="serviceRenovation">
+                    <a href="services.html"> <img src="./images/old_photo.jpg" alt="photo_ancienne"> </a>
+                    <div>
+                        <p>Restauration de photos anciennes, redonnez vie à vos souvenirs d'antan...</p>
+                    </div>
+                    <div class="btnServices">
+                        <a href="services.html#restaurationPhoto"><button>En savoir plus →</button>  </a>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <section class="informations" id="categorieInformations">
+        <div class="horaires">
+            <h3>Horaires</h3>
+            <p >Je suis présente le LUNDI, MERCREDI et VENDREDI dans la matinée.</p>
+            <p class="textCouleur">(Sauf absence pour rendez-vous extérieur)</p>
+            <h3>Les autres jours</h3>
+            <p>Vous avez la possibilité de venir directement au studio, <br>si je suis là je vous accueillerez avec plaisir. <br>Cependant pour éviter tout desagréments il est conseillé de prendre rendez-vous</p>
+            <div class="rdv">
+                <i class="fa-solid fa-phone"></i>
+                <span class="phone">06.50.19.23.21</span>
+            </div>
+        </div>
+    </section>
+
+    <div id="carte"></div> 
+
+    <section class="contact" id="categorieContact">
+        <div class="infos">
+            <div class="place">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="place">7 Rue de l'ancienne gare, Bollezeele 59490</span>
+            </div>
+            <div class="phone">
+                <i class="fa-solid fa-phone"></i>
+                <span class="phone">06.50.19.23.21</span>
+            </div>
+            <div class="email">
+                <i class="fa-solid fa-envelope"></i>
+                <span class="email">pmaeght@yahoo.fr</span>
+            </div>
+            <div class="facebook">
+                <a href="https://fr-fr.facebook.com/people/Photomaeght/100057668701223/"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="formulaire">
+            <form>
+                <div><input class="inputContact" placeholder="Votre Nom"></div>
+                <div><input class="inputContact" placeholder="Votre email"></div>
+                <div><input class="inputContact" placeholder="Votre numéro de télephone"></div>
+                <div><textarea placeholder="Une question? une demande de renseignements? c'est par ici..."></textarea></div>
+                <div><button class="btnForm">envoyer</button></div>
+            </form>
+        </div> 
+    </section>
+
+    <div class="traitIntro"></div>
+
+    <footer>
+        <div class="containerFooter">
+            <p>©2022 Photomaeght</p>
+            <a href="#"><p>Conditions d'utilisations</p></a>
+            <a href="https://www.facebook.com/commerce59470/"> <img src="./images/locauxMotiv.png" alt="logo"> </a>
+        </div>
+    </footer>   
+    
+
+
+    
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script src="https://kit.fontawesome.com/a84d56ab83.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>

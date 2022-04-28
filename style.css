@@ -429,8 +429,14 @@ label i {
 }
 /* **************** parallaxe ************** */
 .parallaxe {
-    background: url(./images/parallaxe.jpg) no-repeat fixed 50% 60%;
-    background-size: cover; 
+    background: url(./images/parallaxe.jpg) ;
+    background-position:50% 60%; 
+    background-attachment: fixed; 
+    -o-background-size:cover; 
+    -moz-background-size:cover; 
+    -webkit-background-size:cover; 
+    background-size:cover; 
+    background-repeat:no-repeat;
     height: 500px;
     width: 100%;
 }

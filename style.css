@@ -182,16 +182,6 @@ label i {
     padding: 20px;
     position: relative;
 }
-.swiper::before {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 410px;
-    height: 480px;
-    content: "";
-    border: 2px solid var(--trait);
-    transform: translate(-5px, -5px);
-}
 
 .swiper-slide {
     text-align: center;
@@ -215,6 +205,7 @@ label i {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border: 4px solid #87683A;
 }
 /* **************** style intro ************** */
 .carrousel {
@@ -272,11 +263,11 @@ label i {
     grid-template-columns: 1fr 450px 400px 450px 1fr;
     grid-template-rows: 150px 150px 150px 150px 180px;
     grid-template-areas: 
-        "z b a c "
-        "z b a c "
-        "z e a c "
-        "z e a d "
-        "z e h d ";
+        "z b a c c"
+        "z b a c c"
+        "e e a c c"
+        "e e a d y"
+        "e e h d y";
 }
 
 .categorie:nth-child(1) {
@@ -445,7 +436,7 @@ label i {
 }
 /* ********************service *************** */
 .services {
-    background: url(images/bg.jpg) no-repeat center/cover;
+    
     height: 650px;
     width: 100%;
     display: flex;
@@ -497,7 +488,7 @@ label i {
         margin: 80px auto;
         width: 700px;
         height: 600px;
-        background: rgba(0, 0, 0, 0.459);
+        /* background: rgba(0, 0, 0, 0.459); */
         box-shadow: -10px 15px 25px 0 rgba(0, 0, 0, 0.637);
         border-radius: 5px;
         position: relative;
@@ -587,7 +578,7 @@ label i {
         
     }
     .btnForm:hover{
-        background-color:rgb(187, 13, 13);
+        background-color: #87683A;
         /* color: #fffae1; */
         color: var(--text-color);
         cursor: pointer;
@@ -613,6 +604,10 @@ label i {
     }
     .containerFooter img {
         height: 100px;
+    }
+    .containerFooter i {
+        color: #f1f1f1;
+        margin: auto 30px;
     }
     /* *******************page portfolio de toutes les categories ****************** */
     .retour {
@@ -676,70 +671,104 @@ label i {
     width: 500px;
     margin: 50px;
 }
-/* ********************* inscription/connexion galerie privée ************* */
+/* ********************* connexion espace administrateur ************* */
 
 .formulaires {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
+    /* flex-flow: row wrap; */
     height: 100vh;
-    
+    background-color: #f1f1f1;
 }
-.formInscription, .formConnexion, .overlayInscription {
+.formConnexion {
+    width: 50%;
+}
+.formConnexion form {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 500px;
-    border: 1px solid rgba(0, 0, 0, 0.199);
-    border-radius: 8px;
-    height: 600px;
-    background: rgba(0, 0, 0, 0.349);
 }
-.formInscription {
-    display: none;
+.formConnexion h1 {
+    font-family: 'Parisienne', cursive; 
+    color: #87683A;
 }
-.inputInscription, .inputConnexion {
-    border: none;
-    width: 80%;
+.inputConnexion, .btnConnexionAdmin {
+    border: 1px solid #87683A;
+    outline: none;
+    width: 60%;
     padding: 15px 10px;
     margin: 3px auto 3px auto;
     font-size: 16px;
     border-radius: 8px;
-    margin: 1px 50px;
+    margin: 5px 50px;
+}
+.btnConnexionAdmin:hover {
+    background-color: #87683A;
+    color: #f1f1f1;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.imgConnexion {
+    width: 50%;
+    height: 100vh;
+}
+.clipPath {
+    background: url(images/bg.jpg) no-repeat center/cover;
+    -webkit-clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%);
+    width: 100%;
+    height: 100%;
 }
 
 
 
 
 /* ********************** responsive page d'accueil *************** */
-@media screen and (max-width: 1349px) {
-    .services {
-        height: 1200px;
-    }
-}
 @media screen and (max-width: 1335px) {
     .horaires::after {
         top: -100px;
         transform: rotate(10deg);
         right: -80px;
     }
+    .clique::after {
+        bottom: 35px;
+        left: 160px;
+        transform: rotate(40deg);
+    }
+}
+@media screen and (max-width: 1319px) {
+    .services {
+        height: 1270px;
+    }
 }
 @media screen and (max-width: 1300px) {
     .portfolio {
         height: auto;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0px 370px 250px 350px 500px;
+        grid-template-rows:  370px 250px 350px 100px 600px;
         grid-template-areas: 
-            "paragraphe paragraphe "
             "a b"
             "a d"
             "e d"
+            "e z"
             "c c";
+    }
+    .categorie:nth-child(1) {
+        margin: 20px 25px 25px 25px;
+        grid-area: a;
+        position: relative;
     }
     .portfolio h3 {text-align: center;}
     .categorie:nth-child(1) {line-height: 1.7em;}
+}
+@media screen and (max-width: 1200px) {
+    .clique::after {
+        bottom: 35px;
+        left: 130px;
+        transform: rotate(40deg);
+    }
 }
 @media screen and (max-width: 1019px) {
     .icones a {display: none;}
@@ -747,13 +776,16 @@ label i {
     .photo {margin: 10px auto;}
     .swiper {width: 800px; margin: auto;}
     .swiper::before {width: 780px;}
+    .clique::after {
+        bottom: 35px;
+        left: 150px;
+        transform: rotate(40deg);
+    }
 }
-@media screen and (max-width: 959px) {
-    .services {height: 1250px}
+@media screen and (max-width: 879px) {
+    .services {height: 1910px}
 }
-@media screen and (max-width: 959px) {
-    .services {height: 1780px}
-}
+
 @media screen and (max-width: 800px) {
     /* .icones a {display: none;} */
     .imgIntro, .clique {margin-right: 150px;}
@@ -777,12 +809,19 @@ label i {
         margin: 20px 10px;
     }
 }
+@media screen and (max-width: 700px) {
+    .categorie:nth-child(1) {line-height: 1.2em;}
+    .portfolio {
+        grid-template-rows: 300px 250px 350px 100px 500px;
+    }
+}
 @media screen and (max-width: 691px) {
     .portfolio {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-top: 50px;
+        /* margin-top: 50px; */
+        /* margin: 50px auto 0px; */
     }
     .categorie {width: 90%; height: 350px;}
     .categorie img {
@@ -790,7 +829,17 @@ label i {
         height: 100%;
         object-fit: cover;
     }
-    .mariage {background-color: beige;}
+    .categorie:nth-child(1) {
+        order: 1;
+        height: 550px;
+        width: 70%
+    }
+    .categorie:nth-child(2) {
+        order: 2;
+    }
+    .categorie:nth-child(3) {
+        order: 3;
+    }
     .services {height: 1950px;}
     .swiper {width: 600px;}
     .swiper::before {width: 580; margin: auto;}
@@ -822,21 +871,27 @@ label i {
    }
    .infos {font-size: 18px;}
 }
-@media screen and (max-width: 700px) {
-    .categorie:nth-child(1) {line-height: 1.2em;}
-    .portfolio {
-        grid-template-rows: 0px 300px 250px 350px 500px;
-    }
-}
 @media screen and (max-width: 505px) {
     .portfolio h3 {margin: 0;}
     .categorie:nth-child(1) {line-height: 1em; height:400px}
-    
+    .horaires{
+        border-top: 15px solid #CEBBA2;
+        border-right: 15px solid #CEBBA2;
+        border-bottom: 80px solid #CEBBA2;
+        border-left: 15px solid #CEBBA2;
+    }
+    .horaires p {
+        margin: auto 10px;
+    }
+    #carte {
+        width: 90%;
+    }
 }
 @media screen and (max-width: 467px) {
     label .iconesMenus {display: none;}
 }
-/* *************************responsive portfolio ************************ */
+/* *************************responsive portfolio ************************ */ 
+
 @media screen and (max-width: 550px) {
     .galerie img {width: 400px;}
 }

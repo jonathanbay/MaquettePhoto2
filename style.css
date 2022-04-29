@@ -429,8 +429,8 @@ label i {
 }
 /* **************** parallaxe ************** */
 .parallaxe {
-    background: url(./images/parallaxe.jpg) ;
-    background-position:50% 60%; 
+    background-image: url(./images/parallaxe.jpg) ;
+    background-position:50% 80%; 
     background-attachment: fixed; 
     -o-background-size:cover; 
     -moz-background-size:cover; 
@@ -441,7 +441,7 @@ label i {
     width: 100%;
 }
 /* ********************service *************** */
-.services {
+/* .services {
     
     height: 650px;
     width: 100%;
@@ -484,7 +484,65 @@ label i {
 .btnServices button:hover {
     background-color: #87683A;
     color: #000;
+} */
+/* ******* essai ************ */
+
+.services {
+    height: 600px;
+    width: 100%;
+    background: url(./images/bgService.jpg) no-repeat center/cover;
+    margin: auto;
 }
+.conteneurServices {
+    height: 700px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+ }
+.cart {
+    height: 400px;     
+    width: 300px;  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.603);
+    border-radius: 10px;
+    margin:10px;
+}
+.cart img {
+    height: 80px;
+    width: 80px;
+    margin: 10px auto 50px auto;
+    
+    
+}
+.cart p {
+    text-align: center;
+    margin:30px 20px 30px 20px;
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-weight: 600; */
+    font-size: 16px;
+}
+
+.btnServices {
+    border: 1px solid black;
+    width: 200px;
+    text-align: center;
+    padding: 10px 5px;
+    margin: 20px auto;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+.btnServices:hover {
+    background-color: #87683A;
+    color: #f1f1f1;
+    border: none;
+    transition: 0.7s ease-in-out;
+} 
 
 /* ************** informations **************** */
 .informations {
@@ -688,7 +746,7 @@ label i {
     align-items: center;
     /* flex-flow: row wrap; */
     height: 100vh;
-    background-color: #f1f1f1;
+    background-color: #fff;
 }
 .formConnexion {
     width: 50%;
@@ -724,7 +782,7 @@ label i {
     height: 100vh;
 }
 .clipPath {
-    background: url(images/bg.jpg) no-repeat center/cover;
+    background: url(images/sunset.jpg) no-repeat center/cover;
     -webkit-clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%);
     clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%);
     width: 100%;
@@ -747,11 +805,11 @@ label i {
         transform: rotate(40deg);
     }
 }
-@media screen and (max-width: 1319px) {
+/* @media screen and (max-width: 1319px) {
     .services {
         height: 1270px;
     }
-}
+} */
 @media screen and (max-width: 1300px) {
     .portfolio {
         height: auto;
@@ -791,9 +849,14 @@ label i {
         transform: rotate(40deg);
     }
 }
-@media screen and (max-width: 879px) {
-    .services {height: 1910px}
+@media screen and (max-width: 959px) {
+    .services {
+        height: 850px;
+    }
 }
+/* @media screen and (max-width: 879px) {
+    .services {height: 1910px}
+} */
 
 @media screen and (max-width: 800px) {
     /* .icones a {display: none;} */
@@ -849,7 +912,7 @@ label i {
     .categorie:nth-child(3) {
         order: 3;
     }
-    .services {height: 1950px;}
+    /* .services {height: 1950px;}  */
     .swiper {width: 600px;}
     .swiper::before {width: 580; margin: auto;}
     .horaires {margin-bottom: 0;}
@@ -861,6 +924,11 @@ label i {
         bottom: 40px;
         left: 80px;
         transform: rotate(50deg);
+    }
+}
+@media screen and (max-width: 639px) {
+    .services {
+        height: 1270px;
     }
 }
 @media screen and (max-width: 577px) {

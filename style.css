@@ -427,18 +427,35 @@ label i {
     object-fit: cover;
 }
 /* **************** parallaxe ************** */
+.containerParallaxe {
+    position: relative;
+    height: 500px;
+    width: 100%;
+}
 .parallaxe {
-    background-image: url(./images/parallaxe.jpg) ;
+    /* background-image: url(./images/parallaxe.jpg) ;
     background-position:50% 80%; 
     background-attachment: fixed; 
-    background-blend-mode: multiply;
     -o-background-size:cover; 
     -moz-background-size:cover; 
-    -webkit-background-size:cover; 
+    -webkit-background-size:cover;  
     background-size:cover; 
     background-repeat:no-repeat;
     height: 500px;
+    width: 100%; */
+
+    z-index: -1;
+    position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 500px;
     width: 100%;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:50% 80%;
+    background-image: url('./images/parallaxe.jpg');
+    background-attachment: fixed;
 }
 /* ********************service *************** */
 /* .services {
@@ -497,7 +514,8 @@ label i {
     margin: auto;
 }
 .conteneurServices {
-    height: 700px;
+    /* height: 700px; */
+    padding-top: 100px;
     margin: auto;
     display: flex;
     justify-content: space-evenly;
@@ -817,12 +835,13 @@ label i {
     .portfolio {
         height: auto;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows:  370px 250px 350px 100px 600px;
+        grid-template-rows: 100px 400px 370px 100px 350px 600px;
         grid-template-areas: 
             "a b"
-            "a d"
-            "e d"
-            "e z"
+            "a b "
+            "a e"
+            "d e"
+            "d e"
             "c c";
     }
     .categorie:nth-child(1) {
@@ -853,9 +872,8 @@ label i {
     }
 }
 @media screen and (max-width: 959px) {
-    .services {
-        height: 850px;
-    }
+    .services { height: 850px;}
+    .conteneurServices { padding-top: 0;}
 }
 /* @media screen and (max-width: 879px) {
     .services {height: 1910px}
@@ -904,7 +922,7 @@ label i {
         height: 100%;
         object-fit: cover;
     }
-    .categorie:nth-child(1) {
+    .categorie:nth-child(1), .categorie:nth-child(4) {
         order: 1;
         height: 550px;
         width: 70%
@@ -915,7 +933,7 @@ label i {
     .categorie:nth-child(3) {
         order: 3;
     }
-    /* .services {height: 1950px;}  */
+    .mariage, .concert  {left: 50%; transform: translateX(-50%)}
     .swiper {width: 600px;}
     .swiper::before {width: 580; margin: auto;}
     .horaires {margin-bottom: 0;}

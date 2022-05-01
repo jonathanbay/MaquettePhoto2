@@ -260,7 +260,7 @@ label i {
     display: grid;
     /* grid-template-columns: 450px 400px 450px 10px; */
     grid-template-columns: 1fr 450px 400px 450px 1fr;
-    grid-template-rows: 150px 150px 150px 150px 180px;
+    grid-template-rows: 150px 150px 150px 150px 230px;
     grid-template-areas: 
         "z b a c c"
         "z b a c c"
@@ -446,6 +446,16 @@ label i {
 
     z-index: -1;
     position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+    background-image: url('./images/parallaxe.jpg');
+    background-attachment: fixed;
+
+    /* z-index: -1;
+    position: fixed;
     position: absolute;
     top: 0;
     left: 0;
@@ -455,7 +465,7 @@ label i {
     background-repeat:no-repeat;
     background-position:50% 80%;
     background-image: url('./images/parallaxe.jpg');
-    background-attachment: fixed;
+    background-attachment: fixed; */
 }
 /* ********************service *************** */
 /* .services {
@@ -901,13 +911,30 @@ label i {
         width: 100%;
         margin: 20px 10px;
     }
+    .formulaires {
+        display: block;
+        background-color: #fff;
+        position: relative;
+        overflow: hidden;
+        
+    }
+    .formConnexion {
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+    .imgConnexion {
+        visibility: hidden;
+    }
 }
-@media screen and (max-width: 700px) {
+/* @media screen and (max-width: 700px) {
     .categorie:nth-child(1) {line-height: 1.2em;}
     .portfolio {
         grid-template-rows: 300px 250px 350px 100px 500px;
     }
-}
+} */
 @media screen and (max-width: 691px) {
     .portfolio {
         display: flex;

@@ -946,7 +946,9 @@ label i {
     .categorie:nth-child(1), .categorie:nth-child(4) {
         order: 1;
         height: 550px;
-        width: 70%
+        width: 70%;
+        left: 45%;
+        transform: translateX(-50%);
     }
     .categorie:nth-child(2) {
         order: 2;
@@ -954,7 +956,7 @@ label i {
     .categorie:nth-child(3) {
         order: 3;
     }
-    .mariage, .concert  {left: 50%; transform: translateX(-50%)}
+    /* .mariage, .concert  {left: 50%; transform: translateX(-50%)} */
     .swiper {width: 600px;}
     .swiper::before {width: 580; margin: auto;}
     .horaires {margin-bottom: 0;}

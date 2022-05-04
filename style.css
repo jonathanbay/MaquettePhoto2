@@ -550,6 +550,7 @@ label i {
 /* ************** informations **************** */
 .informations {
     height: auto;
+    margin-bottom: 50px;
 }
     .horaires {
         margin: 80px auto;
@@ -1054,7 +1055,7 @@ margin: 5px 20px;
     .categorie:nth-child(3) {
         order: 3;
     }
-    .mariage, .evenement  {left: 45%; transform: translateX(-50%)}
+    .mariage, .concert  {left: 45%; transform: translateX(-50%)}
     .swiper {width: 600px;}
     .swiper::before {width: 580; margin: auto;}
     .horaires {margin-bottom: 0;}
@@ -1087,7 +1088,8 @@ margin: 5px 20px;
 }
 @media screen and (max-width: 505px) {
     .portfolio h3 {margin: 0;}
-    .categorie:nth-child(1) {line-height: 1em; height:400px}
+    .categorie:nth-child(1) {line-height: 1em; height:460px}
+    .categorie:nth-child(4) {line-height: 1em; height:460px}
     .horaires p {margin: auto 10px;}
     #carte {
         width: 90%;

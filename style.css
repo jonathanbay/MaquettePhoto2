@@ -1027,12 +1027,9 @@ margin: 5px 20px;
         visibility: hidden;
     }
 }
-/* @media screen and (max-width: 700px) {
-    .categorie:nth-child(1) {line-height: 1.2em;}
-    .portfolio {
-        grid-template-rows: 0px 300px 250px 350px 500px;
-    }
-} */
+@media screen and (max-width: 727px) {
+    .horaires { height: 550px;}
+}
 @media screen and (max-width: 691px) {
     .portfolio {
         display: flex;
@@ -1085,15 +1082,13 @@ margin: 5px 20px;
     .clique {display: none;}
     .swiper {max-width: 500px;}
     .swiper::before {max-width: 480px;}
-    .horaires {width: 95%;height: 550px; margin: 20px auto;}
+    .horaires {width: 95%; margin: 20px auto;}
    .infos {font-size: 18px;}
 }
 @media screen and (max-width: 505px) {
     .portfolio h3 {margin: 0;}
     .categorie:nth-child(1) {line-height: 1em; height:400px}
-    .horaires p {
-        margin: auto 10px;
-    }
+    .horaires p {margin: auto 10px;}
     #carte {
         width: 90%;
     }
@@ -1101,6 +1096,15 @@ margin: 5px 20px;
 @media screen and (max-width: 467px) {
     label .iconesMenus {display: none;}
 }
+@media screen and (max-width: 409px) {
+    .horaires {height: 600px; }
+    }
+    @media screen and (max-width: 375px) {
+        .horaires {height: 650px; }
+        .horaires::after {
+            bottom: 25px;
+        } 
+    }
 /* *************************responsive portfolio ************************ */ 
 
 @media screen and (max-width: 550px) {

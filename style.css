@@ -1104,7 +1104,7 @@ margin: 5px 20px;
     @media screen and (max-width: 375px) {
         .horaires {height: 650px; }
         .horaires::after {
-            bottom: 25px;
+            bottom: 10px;
         } 
     }
 /* *************************responsive portfolio ************************ */ 

@@ -24,7 +24,6 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  cursor: url(images/logo.png), auto;
 }
 label {
     height: 500px;
@@ -162,7 +161,7 @@ label i {
     width: 80px;
     height: 125px;
     transform: rotate(50deg);
-    background: url(../images/arrow.png) no-repeat center;
+    background: url(./images/arrow.png) no-repeat center;
     object-fit: cover;
     z-index: 3;
 }
@@ -740,7 +739,7 @@ label i {
         text-decoration: none;
     }
     .galerie {
-        width: 80%;
+        width: 100%;
         max-width: 1300px;
         margin: 20px auto;
         display: flex;
@@ -749,8 +748,8 @@ label i {
         flex-flow: row wrap;
     }
     .galerie img {
-        /* width: 100%; */
-        /* height: 100%; */
+        width: 100%; 
+        height: 100%;
         object-fit: contain;
         margin: 10px;
         width: 500px;
@@ -843,7 +842,7 @@ label i {
     height: 100vh;
 }
 .clipPath {
-    background: url(../images/imgConnexionAdmin.jpg) no-repeat center/cover;
+    background: url(./images/imgConnexionAdmin.jpg) no-repeat center/cover;
     -webkit-clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%);
     clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%);
     width: 100%;

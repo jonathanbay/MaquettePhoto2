@@ -25,22 +25,17 @@ body {
   margin: 0;
   padding: 0;
 }
-label {
+/* label {
     height: 500px;
 }
 label .menu {
   position: absolute;
-  /* right: -100px;
-  top: -100px; */
-  right: 0px;
+    right: 0px;
   top: 0px;
   z-index: 100;
-  /* width: 200px;
-  height: 200px; */
-  width: 90px;
+    width: 90px;
   height: 90px;
   background: #FFF;
-  /* border-radius: 50% 50% 50% 50%; */
   border-radius:50% 0 50% 50%;
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
@@ -50,9 +45,7 @@ label .menu {
 }
 label .hamburger {
   position: absolute;
-  /* top: 135px;
-  left: 50px; */
-  top: 50%;
+    top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 30px;
@@ -129,7 +122,93 @@ label i {
     color: rgb(48, 47, 47);
     font-size: 25px;
     margin: 0 20px;
+} */
+.menu {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    z-index: 100;
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    border-radius: 50% ;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+    cursor: pointer;
 }
+.hamburger {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 2px;
+    background: rgb(48, 47, 47);
+    display: block;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+.hamburger:after,
+.hamburger:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 100%;
+    background: rgb(48, 47, 47);
+}
+.hamburger:before {
+    top: -10px;
+}
+.hamburger:after {
+    bottom: -10px;
+}
+
+.containerMenu {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.95);
+    overflow-x: hidden;
+    transition: 0.7s;
+    overflow-y: hidden;
+}
+.menu-content {
+    position: relative;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+.containerMenu a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #b4b1b1;
+    display: block;
+    transition: 0.3s;
+}
+.containerMenu a:hover, .containerMenu a:focus {
+    color: #f1f1f1;
+}
+
+.containerMenu .closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+.menu-content i {
+    color: #b4b1b1;
+    font-size: 25px;
+    margin: 0 20px;
+} 
 /* ************** navbar ************** */
 .navbar {
     display: flex;
@@ -176,7 +255,7 @@ label i {
 .swiper {
     width: 450px;
     height: 520px;
-    margin: 50px 100px;
+    margin: 50px 5px;
     padding: 20px;
     position: relative;
 }
@@ -203,8 +282,7 @@ label i {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* border: thick double #87683A */
-    border: 4px solid #87683A;
+    border: thick double #87683A;
 }
 /* **************** style intro ************** */
 .carrousel {
@@ -245,6 +323,22 @@ label i {
     margin-right: 30px;
 }
 /* ******************* portfoilo *************** */
+.portfolio {
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 450px 400px 450px 1fr ;
+    grid-template-rows:  150px 150px 150px 150px 150px 230px;
+    grid-template-areas:
+        " z b x c v "
+        " z b a c v "
+        " z b a c v "
+        " y e a d v "
+        " y e a d v "
+        " y e w d v ";
+}
 .portfolio::after {
     content: "portfolio";
     position: absolute;
@@ -252,53 +346,36 @@ label i {
     transform: translateX(-50%);
     top: -100px;
     font-size: 80px;
-    color: #87683A;
-    font-family: 'Parisienne', cursive;
-}
-.portfolio {
-    position: relative;
-    margin-top: 50px;
-    width: 100%;
-    margin: auto;
-    display: grid;
-    /* grid-template-columns: 450px 400px 450px 10px; */
-    grid-template-columns: 1fr 450px 400px 450px 1fr;
-    grid-template-rows: 100px 150px 150px 150px 150px 230px;
-    grid-template-areas: 
-            "z b x x x"
-            "z b a c c"
-            "z b a c c"
-            "e e a c c"
-            "e e a d y"
-            "e e h d y";
+    color: #87683a;
+    font-family: "Parisienne", cursive;
 }
 
-.categorie:nth-child(1) {
+.mariage {
     margin: 100px 25px 25px 25px;
     grid-area: a;
     position: relative;
 }
-.categorie:nth-child(2) {
-    /* margin: 40px 25px 25px 50px; */
+
+.famille {
     margin: 25px;
     grid-area: c;
     position: relative;
 }
-.categorie:nth-child(3) {
-    /* margin: 0px 25px 25px 25px; */
+
+.enfant{
     margin: 25px;
-    grid-area: d;
+    grid-area: b;
     position: relative;
 }
-.categorie:nth-child(4) {
-    /* margin: 50px 25px 35px 50px; */
+
+.concert {
     margin: 25px;
     grid-area: e;
     position: relative;
 }
-.categorie:nth-child(5) {
-    grid-area: b;
-    /* margin: 0px 25px 0px 25px; */
+
+.animaux {
+    grid-area: d;
     margin: 25px;
     position: relative;
 }
@@ -307,14 +384,19 @@ label i {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border: thick double #87683A;
+    border: thick double #87683a;
     border-width: 6px;
-    
 }
-.textePortfolio p{
+
+.textePortfolio p {
     padding-bottom: 30px;
 }
-.mariage::before, .famille::before, .enfant::before, .evenement::before, .animaux::before {
+
+.mariage::before,
+.famille::before,
+.enfant::before,
+.evenement::before,
+.animaux::before {
     position: absolute;
     width: 30px;
     height: 35px;
@@ -329,39 +411,59 @@ label i {
     z-index: 3;
 }
 
-.mariage::after, .famille::after, .enfant::after, .evenement::after, .animaux::after {
+.mariage::after,
+.famille::after,
+.enfant::after,
+.evenement::after,
+.animaux::after {
     content: "Consulter les photos";
     position: absolute;
     top: 80px;
     left: 30px;
     display: none;
     color: var(--text-color);
-    font-family: 'Parisienne', cursive;
+    font-family: "Parisienne", cursive;
     margin: auto;
     z-index: 3;
- }
+}
+
 .mariage::before {
     content: "Mariages";
 }
+
 .famille::before {
     content: "Familles";
 }
+
 .enfant::before {
-    content:"Enfants";
+    content: "Enfants";
 }
+
 .evenement::before {
-    content:"Evenements";
+    content: "Evenements";
 }
+
 .animaux::before {
-    content:"Animaux";
+    content: "Animaux";
 }
-.mariage:hover, .famille:hover, .enfant:hover, .evenement:hover, .animaux:hover  {  
+
+.mariage:hover,
+.famille:hover,
+.enfant:hover,
+.evenement:hover,
+.animaux:hover {
     opacity: 0.9;
 }
-.mariage:hover::after, .famille:hover::after, .enfant:hover::after, .evenement:hover::after, .animaux:hover::after {  
+
+.mariage:hover::after,
+.famille:hover::after,
+.enfant:hover::after,
+.evenement:hover::after,
+.animaux:hover::after {
     display: block;
     opacity: 1;
 }
+
 .categorie img:hover {
     transform: scale(1.01);
     filter: brightness(1.1);
@@ -374,125 +476,60 @@ label i {
     flex-flow: row wrap;
     margin-top: 50px;
     margin-bottom: 100px;
-    background-color: #CEBBA2;
+    background-color: #cebba2;
 }
+
 .presentation {
     height: auto;
     width: 50%;
 }
+
 .presentation p {
     text-align: left;
-    font-size: 18px;
-    margin: 70px 80px;
-    /* color: var(--text-color); */
+    font-size: 20px;
+    margin: 20px auto;
     color: #000;
+    width: 80%;
 }
-.patricia {
-    position: relative;
+.presentation .patricia, .presentation .jose {
+    font-style: italic;
+    font-weight: bold;
+    background: #87683a;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 70%;
+    padding: 10px 50px;
 }
 .presentation h1 {
     text-align: center;
     color: #000;
+    font-family: "Parisienne", cursive;
+    font-size: 45px;
 }
 .photo {
     margin: 50px auto;
     width: 400px;
     height: 500px;
 }
-.patricia::before {
-    content: "";
-    position: absolute;
-    width: 350px;
-    height: 60px;
-    top: -40px;
-    right: -130px;
-    background-color: #87683A;
-    z-index: 2;
-}
-.patricia::after {
-    content: "Patricia Maeght";
-    position: absolute;
-    width: 350px;
-    height: 60px;
-    top: -30px;
-    right: -220px;
-    color: #000;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 25px;
-    z-index: 2;
-}
+
 .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-/* **************** parallaxe ************** */
-.parallaxe {
-    /* background: url(../images/parallaxe.jpg) no-repeat fixed 50% 60%; */
-    background-image: url(./images/parallaxe.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 50% 60%; 
-    background-size: cover; 
-    height: 500px;
-    width: 100%;
-}
-/* ********************service *************** */
-/* .services {
-    height: 650px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-flow: row wrap;
-}
-.identite, .restauration, .cadeau  {
-    display: flex;
-    justify-content: center;
-    width: 420px;
-    background-color: #232323a8;
-    margin: 10px;
-}
-.servicePhoto, .serviceCadeau, .serviceRenovation {
-    width: 300px;
-    height: 350px;
-    margin: 10px ;
-    color: var(--text-color);
-}
-.servicePhoto img, .serviceCadeau img, .serviceRenovation img {
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
-}
-.btnServices button {
-    text-align: center;
-    border: 3px solid #87683A;
-    background-color:  var(--bg-color);
-    color: var(--text-color);
-    width: 180px;
-    padding: 16px;
-    font-size: 17px;
-    font-weight: 600;
-}
-.btnServices {
-    display: flex;
-    justify-content: center;
-}
-.btnServices button:hover {
-    background-color: #87683A;
-    color: #000;
-} */
 
+/* ********************service *************** */
 
 .services {
     height: 600px;
     width: 100%;
     background-image: url(./images/bgService.jpg) ;
-    background-size:cover; 
-    background-repeat:no-repeat;
-    background-position:center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     margin: auto;
 }
+
 .conteneurServices {
     /* height: 700px; */
     padding-top: 100px;
@@ -501,29 +538,29 @@ label i {
     justify-content: space-evenly;
     align-items: center;
     flex-flow: row wrap;
- }
+}
+
 .cart {
-    height: 400px;     
-    width: 300px;  
+    height: 400px;
+    width: 300px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.603);
     border-radius: 10px;
-    margin:10px;
+    margin: 10px;
 }
+
 .cart img {
     height: 80px;
     width: 80px;
+    object-fit: cover;
     margin: 10px auto 50px auto;
-    
-    
 }
+
 .cart p {
     text-align: center;
-    margin:30px 20px 30px 20px;
-    /* font-family: 'Montserrat', sans-serif; */
-    /* font-weight: 600; */
+    margin: 30px 20px 30px 20px;
     font-size: 16px;
 }
 
@@ -538,13 +575,14 @@ label i {
     color: #000;
     font-size: 18px;
 }
-.btnServices:hover {
-    background-color: #3b3b3b;
+
+.btnServices:hover, .btnServices:focus {
+    background-color: #87683a;
     color: #f1f1f1;
     border: none;
+    -webkit-transition: 0.7s ease-in-out;
     transition: 0.7s ease-in-out;
-} 
-
+}
 
 /* ************** informations **************** */
 .informations {
@@ -756,38 +794,43 @@ label i {
         height: auto;
     }
 /* *******************style page mes services******************** */
-.identiteService, .cadeauService, .restaurationPhoto {
+.identiteService,
+.cadeauService,
+.travauxPhotos {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    margin: 100px auto;
+    margin: 50px auto;
     color: var(--text-color);
 }
-.cadeauService {
-    background: #f1f1f1;
-    color: #000;
+.cadeauService a, .identiteService a {
+    color: #f1f1f1;
 }
 
 .identiteService img {
     width: 400px;
     margin: 30px 60px;
 }
-.cadeauService img {
+
+.cadeauService img, .travauxPhotos img {
     width: 450px;
     margin: 30px 60px;
 }
-.restaurationPhoto img {
-    width: 450px;
-    margin: 30px 60px;
-}
-.identiteService p, .cadeauService p, .restaurationPhoto p {
+
+.identiteService p,
+.cadeauService p,
+.travauxPhotos p {
     width: 500px;
     margin: 50px;
     line-height: 3rem;
 }
-.imgCadeau {
-    order: 1;
+.titreRenovPhoto, .titreIdentitePhoto, .titreCadeauPhoto {
+    text-align: center;
+    color: #f1f1f1;
+    text-decoration: underline;
+    font-family: "Parisienne", cursive;
+    margin: 0 10px;
 }
 /* ********************* connexion espace administrateur ************* */
 
@@ -937,85 +980,161 @@ margin: 5px 20px;
     }
 /* ********************** responsive page d'accueil *************** */
 
+@media screen and (max-width: 1480px) {
+    .clique::after {
+        bottom: 20px;
+        left: 150px;
+        transform: rotate(50deg);
+    }
+}
+
 @media screen and (max-width: 1335px) {
     .clique::after {
-        bottom: 35px;
-        left: 160px;
-        transform: rotate(40deg);
+        left: 130px;
     }
 }
 
 @media screen and (max-width: 1300px) {
     .portfolio {
         height: auto;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px 400px 370px 100px 350px 600px;
-        grid-template-areas: 
-            "a b"
-            "a b "
-            "a e"
-            "d e"
-            "d e"
-            "c c";
+        grid-template-columns: 150px 1fr 1fr 150px;
+        grid-template-rows: 200px 300px 200px 300px 200px 600px;
+        grid-template-areas:
+            "z a b y"
+            "z a b y"
+            "z a e y"
+            "z d e y"
+            "z d e y"
+            "z c c y";
     }
-    .portfolio h3 {text-align: center;}
-    .categorie:nth-child(1) {line-height: 1.7em;}
+
+    .portfolio h3 {
+        text-align: center;
+    }
 }
+
 @media screen and (max-width: 1200px) {
     .clique::after {
-        bottom: 35px;
-        left: 130px;
-        transform: rotate(40deg);
+        /* bottom: 35px; */
+        left: 90px;
+        /* transform: rotate(46deg); */
     }
 }
+@media screen and (max-width: 1169px) {
+    .pellicule {
+        order: 1;
+    }
+}
+@media screen and (max-width: 1119px) {
+    .identiteService p,
+    .cadeauService p,
+    .travauxPhotos p {
+        width: 80%;
+        margin: 50px;
+        line-height: 1.7rem;
+        text-align: center;
+    }
+    .imageCadeau {
+        order: 1  ;
+    }
+}
+
 @media screen and (max-width: 1019px) {
     .icones a {display: none;}
-    .imgIntro, .clique {margin-right: 150px;}
-    .photo {margin: 10px auto;}
-    .swiper {width: 800px; margin: auto;}
-    .swiper::before {width: 780px;}
-    .clique::after {
-        bottom: 35px;
-        left: 150px;
-        transform: rotate(40deg);
-    }
-}
-@media screen and (max-width: 959px) {
-    .services { height: 850px;}
-    .conteneurServices { padding-top: 0;}
-    .formRequest { width: 80%}
-}
 
+    .imgIntro,
+    .clique {
+        margin-right: 140px;
+    }
+
+    .photo {
+        margin: 10px auto;
+    }
+
+    .clique::after {
+        bottom: 30px;
+        left: 120px;
+        transform: rotate(45deg);
+    }
+    
+}
+@media screen and (max-width: 1000px) {
+    .portfolio {
+        height: auto;
+        grid-template-columns:  1fr 1fr ;
+        grid-template-rows: 200px 300px 200px 300px 200px 600px;
+        grid-template-areas:
+            " a b "
+            " a b "
+            " a e "
+            " d e "
+            " d e "
+            " c c ";
+    }
+
+@media screen and (max-width: 959px) {
+    .services {height: 850px;}
+    .conteneurServices {padding-top: 0;}
+    .presentation .patricia, .presentation .jose {margin-left: 50%;}
+}
 
 @media screen and (max-width: 800px) {
+
     /* .icones a {display: none;} */
-    .imgIntro, .clique {margin-right: 150px;}
-    /* .photo {margin: 10px auto;} */
-    .imgIntro img {height: 110px;}
-    .clique::after {
-        bottom: 35px;
-        left: 110px;
-        transform: rotate(40deg);
+    .imgIntro,
+    .clique {
+        margin-right: 150px;
     }
-    .swiper {width: 98%; margin: auto;}
-    .swiper::before {width: 96%;}
-    .containerFooter p {font-size: 16px;}
-    .aPropos{justify-content: center;}
-    .presentation{width: 80%;}
-    .presentation p {margin: 30px 10px 70px 10px;}
-    .patricia::before{left: 50%; transform: translateX(-50%);}
-    .patricia::after{left: 50%; transform: translateX(-50%); text-align: center;}
+
+    /* .photo {margin: 10px auto;} */
+    .imgIntro img {
+        height: 110px;
+    }
+
+    .clique::after {
+        /* bottom: 35px; */
+        left: 100px;
+        transform: rotate(50deg);
+    }
+
+    .containerFooter p {
+        font-size: 16px;
+    }
+
+    .aPropos {
+        justify-content: center;
+    }
+
+    .presentation {
+        width: 80%;
+    }
+    .photo img {
+        margin-top: 50px;
+        padding-bottom: 50px;
+    }
+    .patricia::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .patricia::after {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
     .horaires {
         width: 80%;
         margin: 20px auto;
     }
+
     .formulaires {
         display: block;
         background-color: #fff;
         position: relative;
         overflow: hidden;
-        
     }
+
     .formConnexion {
         position: absolute;
         left: 50%;
@@ -1023,103 +1142,170 @@ margin: 5px 20px;
         transform: translateX(-50%);
         width: 100%;
     }
+
     .imgConnexion {
         visibility: hidden;
     }
 }
+
 @media screen and (max-width: 727px) {
-    .horaires { height: 550px;}
+    .horaires {
+        height: 550px;
+    }
 }
-@media screen and (max-width: 691px) {
+
+@media screen and (max-width: 700px) {
     .portfolio {
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin-top: 50px;
     }
-    .categorie {width: 90%; height: 350px;}
+    .btnMdpReset, .inputMdpReset {
+        width: 90%;
+    }
+    .formRequest, .formReset {
+        width: 90%;
+    }
+
+    .categorie {
+        width: 90%;
+        height: 550px;
+    }
+
     .categorie img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    .categorie:nth-child(1), .categorie:nth-child(4) {
-        order: 1;
-        height: 550px;
-        width: 70%
+
+    /* .swiper {
+        width: 90%;
+    }  */
+
+    .swiper::before {
+        width: 580;
+        margin: auto;
+    } 
+
+    .horaires {
+        margin-bottom: 0;
     }
-    .categorie:nth-child(2) {
+
+    .categorie:nth-child(1) {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 656px) {
+    .clique {display: none; order:1}
+    .icones {order:1}
+    .imgIntro {order:0; padding-right: 80px;}
+   
+}
+
+@media screen and (max-width: 639px) {
+    .services {
+        height: 1270px;
+    }
+
+    .formRequest {
+        width: 95%;
+    }
+
+    .inputMdp,
+    .btnMdp {
+        width: 90%;
+    }
+    .cadeauService img, .identiteService img, .travauxPhotos img {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 577px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .imgIntro {
+        margin: auto;
         order: 2;
     }
-    .categorie:nth-child(3) {
-        order: 3;
+
+    .clique {
+        display: none;
     }
-    .mariage, .concert  {left: 45%; transform: translateX(-50%)}
-    .swiper {width: 600px;}
-    .swiper::before {width: 580; margin: auto;}
-    .horaires {margin-bottom: 0;}
-    .categorie:nth-child(1) {
-        margin-top: 0;}
-}
-@media screen and (max-width: 656px) {
-    .clique::after {
-        bottom: 40px;
-        left: 80px;
-        transform: rotate(50deg);
+
+    /* .swiper {
+        max-width: 500px;
+    } */
+
+    /* .swiper::before {
+        max-width: 480px;
+    } */
+
+    .horaires {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .infos {
+        font-size: 18px;
     }
 }
-@media screen and (max-width: 639px) {
-    .services {height: 1270px;}
-    .formRequest { width: 95%;}
-    .inputMdp, .btnMdp { width: 90%;}
-}
-@media screen and (max-width: 592px) {
-    .horaires {height: 550px; }
-    }
-@media screen and (max-width: 577px) {
-    .navbar {flex-direction: column;}
-    .imgIntro {margin: auto;order: 2;}
-    .clique {display: none;}
-    .swiper {max-width: 500px;}
-    .swiper::before {max-width: 480px;}
-    .horaires {width: 95%; margin: 20px auto;}
-   .infos {font-size: 18px;}
-}
+
 @media screen and (max-width: 505px) {
-    .portfolio h3 {margin: 0;}
-    .categorie:nth-child(1) {line-height: 1em; height:460px}
-    .categorie:nth-child(4) {line-height: 1em; height:460px}
-    .horaires p {margin: auto 10px;}
+    .portfolio h3 {
+        margin: 0;
+    }
+
+    .categorie {
+        width: 90%;
+        height: 500px;
+    }
+
+    .horaires p {
+        margin: auto 10px;
+    }
+
     #carte {
         width: 90%;
     }
 }
+
 @media screen and (max-width: 467px) {
-    label .iconesMenus {display: none;}
+    label .iconesMenus {display: none; }
 }
+
 @media screen and (max-width: 409px) {
-    .horaires {height: 600px; }
-    }
-    @media screen and (max-width: 375px) {
-        .horaires {height: 650px; }
-        .horaires::after {
-            bottom: 10px;
-        } 
-    }
-/* *************************responsive portfolio ************************ */ 
+    .horaires {height: 600px;}
+}
+
+@media screen and (max-width: 375px) {
+    .horaires {height: 650px;}
+    .horaires::after {bottom: 0px;}
+    .presentation .patricia, .presentation .jose {margin-left: 30%;}
+    .categorie {height: 400px}
+}
+
+/* *************************responsive portfolio ************************ */
 
 @media screen and (max-width: 550px) {
-    .galerie img {width: 400px;}
+    .galerie img {
+        width: 400px;
+    }
 }
+
 @media screen and (max-width: 416px) {
     .galerie img {width: 350px;}
     .servicePhoto, .serviceCadeau, .serviceRenovation {
         width: 250px;
         height: 300px;
-        margin: 10px ;
+        margin: 10px;
     }
     .photo {
         width: 300px;
         height: 400px;
     }
+}
 }

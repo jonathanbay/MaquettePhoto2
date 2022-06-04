@@ -35,8 +35,16 @@ const marker = L.marker(bollezeele).addTo(map);
 // ajout d'un popup
 marker.bindPopup('<h3>Studio Photomaeght</h3> <br> 7 Rue de l\'ancienne gare');
 
-// ******************** animation formulaire galerie privée ******************
+// ******************** animation menu ******************
+function openNav() {
+  document.getElementById("nav").style.transform = "translateX(0%)";
+  document.getElementById("open").style.display = "none";
+}
 
-const btnOverlayInscription = document.getElementById('btnOverlayInscription');
-const signInButton = document.getElementById('signIn');
+function closeNav() {
+  document.getElementById("nav").style.transform = "translateX(-100%)";
+  document.getElementById("open").style.display = "block";
+}
+
+
 

@@ -8,19 +8,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <label>
-            <input type="checkbox">
-            <span class="menu"> <span class="hamburger"></span> </span>
-            <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house iconesMenus"></i>Acceuil</a></li>
-                <li><a href="index.html#bibliographie"><i class="fa-solid fa-person iconesMenus"></i>À propos</a> </li>
-                <li><a href="index.html#categoriePhotos"><i class="fa-solid fa-camera-retro iconesMenus"></i>Portfolio</a> 
-                <li><a href="index.html#categorieServives"><i class="fa-solid fa-photo-film iconesMenus"></i>Services</a></li>
-                <li><a href="index.html#categorieContact"><i class="fa-solid fa-envelope iconesMenus"></i>Contact</a></li>
-                </li>
-            </ul>
-        </label>
+    <header> 
+        <nav>
+            <div id="nav" class="containerMenu">
+
+                <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a>
+
+                <div class="menu-content">
+                    <a onclick="closeNav()" href="#"><i class="fa-solid fa-house iconesMenus"></i>Accueil</a>
+                    <a onclick="closeNav()" href="#"><i class="fa-solid fa-person iconesMenus"></i>À propos</a>
+                    <a onclick="closeNav()" href="#"><i class="fa-solid fa-camera-retro iconesMenus"></i>Portfolio</a>
+                    <a onclick="closeNav()" href="#"><i class="fa-solid fa-photo-film iconesMenus"></i>Services</a>
+                    <a onclick="closeNav()" href="#"><i class="fa-solid fa-envelope iconesMenus"></i>Contact</a>
+                </div>
+            </div>
+            <span class="menu" onclick="openNav()" id="open"> <span class="hamburger"></span> </span>
+        </nav>
+
         <div class="navbar">
             <div class="icones">
                 <a href="https://fr-fr.facebook.com/people/Photomaeght/100057668701223/"><i class="fa-brands fa-facebook-f"></i></a>
@@ -29,7 +33,8 @@
             <div class="imgIntro">
                 <img src="./images/logoText.png" alt="logo">
             </div>
-            <div class="clique"> <p>Cliquez pour explorer </p></div>
+            <div class="clique"> <p tabindex="1">Cliquez pour explorer </p></div>
+            
         </div>
         <div class="traitIntro"></div>
     </header>
@@ -43,9 +48,24 @@
             <div class="familles"><img src="./images/familles/famille3.jpg" loading="lazy" alt=""></div>
             <div class="familles"><img src="./images/familles/famille4.jpg" loading="lazy" alt=""></div>
         </div>
-        
-
     </main>
+
+    <div class="traitIntro"></div>
+
+<footer>
+	<div class="containerFooter">
+		<p>©2022 Photomaeght</p>
+		<a href="#">
+			<p>Conditions d'utilisations</p>
+		</a>
+		<a href="connexionAdmin.html">
+			<i class="fa-solid fa-house-lock"></i>
+		</a>
+		<a href="https://www.facebook.com/commerce59470/">
+			<img src="images/locauxmotiv1.png" alt="logo">
+		</a>
+	</div>
+</footer>
 
     <script src="https://kit.fontawesome.com/a84d56ab83.js" crossorigin="anonymous"></script>
 </body>

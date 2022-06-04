@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio-mariage</title>
+    <title>Services - Capturer vos moments d'émotions</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,8 +27,8 @@
 
         <div class="navbar">
             <div class="icones">
-                <a href="https://fr-fr.facebook.com/people/Photomaeght/100057668701223/"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="index.html#categorieContact"><i class="fa-solid fa-envelope-circle-check"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope-circle-check"></i></a>
             </div>
             <div class="imgIntro">
                 <img src="./images/logoText.png" alt="logo">
@@ -38,22 +38,24 @@
         </div>
         <div class="traitIntro"></div>
     </header>
-    <main>
-        <div class="retour">
-            <a href="index.html#categoriePhotos"><p>Retour catégories portfolio</p></a>
+    <div class="retour">
+        <a href="index.html"><p>Accueil</p></a>
+    </div>
+
+    <h2 class="titreIdentitePhoto">Photos pour vos documents officiels</h2>
+
+    <div class="identiteService id="identiteService"">
+        <p>Besoin de photos d’identité pou renouveler un passeport ou une carte d’identité? photo pour CV ? <br>
+        Besoin d’un code pour la photo dématérialisée du permis de conduite? je suis agréé photographe ANTS secteur Saint-Omer <br>
+        Prise de vue rapide ! <br><a href="{{ path('app_accueil')}}#categorieContact">Contactez moi</a>  pour plus de renseignements.<br> Paiement par carte bancaire accepté. </p>
+        <div>
+            <img src="./images/prestations/ants.jpg" alt="image titre sécurisé"> 
         </div>
-        <div class="galerie">
-            <div class="containerImg"><img src="./images/enfants/enfant1.jpg" loading="lazy" alt=""></div>
-            <div class="containerImg"><img src="./images/enfants/enfant2.jpg" loading="lazy" alt=""></div>
-            <div class="containerImg"><img src="./images/enfants/enfant3.jpg" loading="lazy" alt=""></div>
-            <div class="containerImg"><img src="./images/enfants/enfant5.jpg" loading="lazy" alt=""></div>
-            <div class="containerImg"><img src="./images/enfants/enfant6.jpg" loading="lazy" alt=""></div>
-        </div>
-    </main>
+    </div>
 
     <div class="traitIntro"></div>
-
-<footer>
+    
+    <footer>
 	<div class="containerFooter">
 		<p>©2022 Photomaeght</p>
 		<a href="#">
@@ -68,6 +70,8 @@
 	</div>
 </footer>
 
+    
     <script src="https://kit.fontawesome.com/a84d56ab83.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 </html>

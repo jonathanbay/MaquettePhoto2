@@ -831,6 +831,7 @@ label i {
     text-decoration: underline;
     font-family: "Parisienne", cursive;
     margin: 0 10px;
+    /* font-size: 22px; */
 }
 /* ********************* connexion espace administrateur ************* */
 
@@ -965,19 +966,21 @@ label i {
     text-align: center;
 } 
 /* **************** conditions d'utilisations ************** */
-.condition {
+.conditionUtilisation {
     margin: 5px 50px;
 }
-.condition p {
-color: #f1f1f1;
-font-size: 14px;
-margin: 5px 20px;
+
+.conditionUtilisation p {
+    color: #f1f1f1;
+    font-size: 14px;
+    margin: 5px 20px;
+    font-size: 20px;
 }
-.condition h3 {
-    color: #87683A;
-    font-family: 'Parisienne', cursive;
-    margin: 0;
-    }
+
+.conditionUtilisation h3 {
+    color: #87683a;
+    text-transform: uppercase;
+}
 /* ********************** responsive page d'accueil *************** */
 
 @media screen and (max-width: 1480px) {
@@ -1236,14 +1239,6 @@ margin: 5px 20px;
         display: none;
     }
 
-    /* .swiper {
-        max-width: 500px;
-    } */
-
-    /* .swiper::before {
-        max-width: 480px;
-    } */
-
     .horaires {
         width: 95%;
         margin: 20px auto;
@@ -1283,7 +1278,7 @@ margin: 5px 20px;
 
 @media screen and (max-width: 375px) {
     .horaires {height: 650px;}
-    .horaires::after {bottom: 0px;}
+    .horaires::after {bottom: -10px;}
     .presentation .patricia, .presentation .jose {margin-left: 30%;}
     .categorie {height: 400px}
 }

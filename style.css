@@ -1247,6 +1247,11 @@ label i {
     .infos {
         font-size: 18px;
     }
+    /* .containerMenu a {
+        font-size: 30px;
+        transform: translateX(-10%);
+    } */
+        
 }
 
 @media screen and (max-width: 505px) {
@@ -1270,6 +1275,10 @@ label i {
 
 @media screen and (max-width: 467px) {
     label .iconesMenus {display: none; }
+    .containerMenu a {transform: translateX(-10%); font-size: 30px;}
+    .containerMenu .closeBtn {
+        right: 150px;
+    }
 }
 
 @media screen and (max-width: 409px) {
